@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  discord-bot:
+    container_name: gaming-scheduler
+    build: .
+    restart: unless-stopped
+    # These variables will be filled in by Portainer later
+    environment:
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+      - CHANNEL_ID=${CHANNEL_ID}
+      - TZ=America/Chicago
