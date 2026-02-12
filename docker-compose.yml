@@ -1,12 +1,33 @@
 version: '3.8'
 
 services:
-  discord-bot:
-    container_name: gaming-scheduler
+  discord-poll-bot:
+    container_name: discord-poll-bot
     build: .
     restart: unless-stopped
-    # These variables will be filled in by Portainer later
     environment:
-      - DISCORD_TOKEN=${DISCORD_TOKEN}
-      - CHANNEL_ID=${CHANNEL_ID}
-      - TZ=America/Chicago
+      - DISCORD_TOKEN= # Discord bot token
+      - CHANNEL_ID= # Discord Channel ID
+      - TARGET_TIME= # Use 24 hour HH:MM format; defaults to 16:00 (4 PM)
+      - TZ= # Defaults to America/Chicago if blank
+      - POLL_QUESTION= # Enter the poll question here. Emojis allowed.
+      - ANSWER_1_TEXT= # Required
+      - ANSWER_1_EMOJI= # Emojis not required
+      - ANSWER_2_TEXT= # Required
+      - ANSWER_2_EMOJI=
+      - ANSWER_3_TEXT= # Answers 3 and greater not required
+      - ANSWER_3_EMOJI=
+      - ANSWER_4_TEXT=
+      - ANSWER_4_EMOJI=
+      - ANSWER_5_TEXT=
+      - ANSWER_5_EMOJI=
+      - ANSWER_6_TEXT=
+      - ANSWER_6_EMOJI=
+      - ANSWER_7_TEXT=
+      - ANSWER_7_EMOJI=
+      - ANSWER_8_TEXT=
+      - ANSWER_8_EMOJI=
+      - ANSWER_9_TEXT=
+      - ANSWER_9_EMOJI=
+      - ANSWER_10_TEXT=
+      - ANSWER_10_EMOJI=
