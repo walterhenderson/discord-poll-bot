@@ -47,7 +47,8 @@ services:
       - ANSWER_2_TEXT=Maybe
       - ANSWER_2_EMOJI=🤔
       - ANSWER_3_TEXT=No
-      - ANSWER_3_EMOJI=❌ # Add up to 10 answers
+      - ANSWER_3_EMOJI=❌
+      # Add up to a total of 10 answers
 ````
 ## 🔑 How to Get your Discord Keys
 To use this bot, you first need to create an app in the Discord Developer Portal:
